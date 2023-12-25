@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <link rel="stylesheet" href="GitStyles.css">
+    <title>Git</title>
+</head>
+
+<body>
+    <h1>Revision of Git</h1>
+        <blockquote>Basic Terminology:
+            <p class="pr"><span>git:</span> an open source, distributed version-control system</p>
+
+            <p class="pr"><span>GitHub:</span> a platform for hosting and collaborating on Git repositories</p>
+
+            <p class="pr"><span>commit:</span> a Git object, a snapshot of your entire repository compressed into a SHA
+            </p>
+
+            <p class="pr"><span>branch:</span> a lightweight movable pointer to a commit</p>
+
+            <p class="pr"><span>clone:</span> a local version of a repository, including all commits and branches</p>
+
+            <p class="pr"><span>remote: </span>a common repository on GitHub that all team members use to exchange their
+                changes</p>
+
+            <p class="pr"><span>fork: </span>a copy of a repository on GitHub owned by a different user</p>
+
+            <p class="pr"><span>pull request:</span> a place to compare and discuss the differences introduced on a
+                branch with reviews, comments, integrated tests, and more</p>
+
+            <p class="pr"><span>HEAD:</span> representing your current working directory, the HEAD pointer can be moved
+                to different branches, tags, or commits when using git checkout</p>
+        </blockquote>
+
+        <h2 id="basic-commands">Basic Commands</h2>
+        <ol type="1">
+            <li>Initializing Git.</li>
+        </ol>
+        <pre><code>git init </code></pre>
+        <ol start="2" type="1">
+            <li>Adding to Staging Area.</li>
+        </ol>
+        <pre><code>git add . git add [file-name]</code></pre>
+        <p id="indentP">Here, Using dot(.) specifies that we are adding all files.</p>
+        <ol start="3" type="1">
+            <li>Commiting the changes.</li>
+        </ol>
+        <pre><code>git commit -m “[description-of-commit]”</code></pre>
+        <ol start="4" type="1">
+            <li>Checking the status.</li>
+        </ol>
+        <pre><code>git status</code></pre>
+        <ol start="5" type="1">
+            <li>Command to check what changes are made.</li>
+        </ol>
+        <pre><code>git diff</code></pre>
+        <ol start="6" type="1">
+            <li>Undo the commit.</li>
+        </ol>
+        <pre><code>git checkout [file-name]</code></pre>
+        <ol start="7" type="1">
+            <li>Shortcut for commiting directly.</li>
+        </ol>
+        <pre><code>git commit -am &quot;description-of-commit&quot;</code></pre>
+        <ol start="8" type="1">
+            <li>To un-stage a staged commit.</li>
+        </ol>
+        <pre><code>git restore -- staged [file-name]</code></pre>
+        <h2 id="git-log-and-its-variations">Git log and its variations</h2>
+        <ol type="1">
+            <li>Displays all the commits.</li>
+        </ol>
+        <pre><code>git log</code></pre>
+        <ol start="2" type="1">
+            <li>Lists all the commits in one line.</li>
+        </ol>
+        <pre><code>git log --oneline</code></pre>
+        <ol start="3" type="1">
+            <li>Lists commits from the mentioned date.</li>
+        </ol>
+        <pre><code>git log --since=“2023-08-2”</code></pre>
+        <ol start="4" type="1">
+            <li>Lists commits till the mentioned date.</li>
+        </ol>
+        <pre><code>git log --until=“2020-10-2”</code></pre>
+        <ol start="5" type="1">
+            <li>Lists commits from one week.</li>
+        </ol>
+        <pre><code>git log --since=“1 week ago”</code></pre>
+        <ol start="6" type="1">
+            <li>Lists commits whose author is ‘Mohsin’.</li>
+        </ol>
+        <pre><code>git log --author=“[Mohsin]”</code></pre>
+        <ol start="7" type="1">
+            <li>Lists commits with the keyword mentioned.</li>
+        </ol>
+        <pre><code>git log --grep=“[commit-message-keyword]”</code></pre>
+        <ol start="8" type="1">
+            <li>Lists commits in a short format.</li>
+        </ol>
+        <pre><code>git log --format=short</code></pre>
+        <ol start="9" type="1">
+            <li>Lists version history for a file, including renames.</li>
+        </ol>
+        <pre><code>git log --follow [file]</code></pre>
+        <ol start="10" type="1">
+            <li>Lists all commits from all branches.</li>
+        </ol>
+        <pre><code>git log --graph --online --decorate --all</code></pre>
+        <h2 id="git-branch">Git Branch</h2>
+        <ol type="1">
+            <li>To create a new branch.</li>
+        </ol>
+        <pre><code>git branch [branch-name]</code></pre>
+        <ol start="2" type="1">
+            <li>To display all the branches.</li>
+        </ol>
+        <pre><code>git branch </code></pre>
+        <ol start="3" type="1">
+            <li>Context Switching from one branch to another.</li>
+        </ol>
+        <pre><code>git checkout [branch-name]</code></pre>
+        <ol start="4" type="1">
+            <li>Creates new-branch and switches to it.</li>
+        </ol>
+        <pre><code>git checkout -b [new-branch-name]</code></pre>
+        <ol start="5" type="1">
+            <li>Rename/Move the branch from branch-one to branch-two.</li>
+        </ol>
+        <pre><code>git branch -m [branch-one] [branch-two]</code></pre>
+        <ol start="6" type="1">
+            <li>Delete the branch.</li>
+        </ol>
+        <pre><code>git branch -d [branch-name]</code></pre>
+        <h2 id="reset-in-git">Reset in Git</h2>
+        <p>There are three types of RESET in Git: Mixed, Soft and Hard.</p>
+        <ol type="1">
+            <li>Default reset often referred as Mixed reset which goes back to the mentioned
+                commit at it’s un-staged state.</li>
+        </ol>
+        <pre><code>git reset HEAD [file-name]</code></pre>
+        
+        <ol start="2" type="1">
+            <li>Soft reset goes back to the mentioned commit at it’s staged
+                state.</li>
+        </ol>
+        <pre><code>git reset --soft [commit]</code></pre>
+        <ol start="3" type="1">
+            <li>Hard reset goes back to the mentioned commit and removes all commits
+                after that. *** Use at your own risk</li>
+        </ol>
+        <pre><code>git reset --hard [commit]</code></pre>
+        <h2 id="remote-repository-related">Remote Repository Related</h2>
+        <ol type="1">
+            <li>Check if Remote</li>
+        </ol>
+        <pre><code>git remote</code></pre>
+        <ol start="2" type="1">
+            <li>Clone a remote repository incldues everything</li>
+        </ol>
+        <pre><code>git clone [remote-url]</code></pre>
+        <ol start="3" type="1">
+            <li>To remove a file from the repository</li>
+        </ol>
+        <pre><code>git rm [file-name]</code></pre>
+        <ol start="4" type="1">
+            <li>Downloads all history from the remote tracking branches</li>
+        </ol>
+        <pre><code>git fetch</code></pre>
+        <ol start="5" type="1">
+            <li>Combines remote tracking branch into current local branch</li>
+        </ol>
+        <pre><code>git merge [branch-name]</code></pre>
+        <ol start="6" type="1">
+            <li>Merging w/ no fast-forward</li>
+        </ol>
+        <pre><code>git merge --no-ff [branch-name]</code></pre>
+        <ol start="7" type="1">
+            <li>Merging w/ fast-forward only if not abort</li>
+        </ol>
+        <pre><code>git merge --ff-only [branch-name]</code></pre>
+        <ol start="8" type="1">
+            <li>Uploading all local branch commits to GitHub</li>
+        </ol>
+        <pre><code>git push origin main</code></pre>
+        <ol start="9" type="1">
+            <li>Updates your current local working branch with all new commits from
+                the corresponding remote branch on GitHub. <code>git pull</code> is a
+                combination of <code>git fetch</code> and <code>git merge</code></li>
+        </ol>
+        <pre><code>git pull</code></pre>
+        <h2 id="the-hidden-files">The hidden-files</h2>
+        <blockquote>
+            <ul>
+                <li><code>.gitignore:</code> The git ignore file ignores the tracking of
+                    files that are specified in it.</li>
+                <li><code>.gitkeep:</code> The git keep file or any file which starts
+                    with (.) is used to track empty directories. Here, we can replace any
+                    name instead of gitkeep.</li>
+            </ul>
+        </blockquote>
+        <h2 id="tagging-in-git">Tagging in Git</h2>
+        <ol type="1">
+            <li>Creating a ticket</li>
+        </ol>
+        <pre><code>git tag v1.2.2 [commit-hash]</code></pre>
+        <ol start="2" type="1">
+            <li>Another way of creating a ticket</li>
+        </ol>
+        <pre><code>git tag -a v2.1.3 -m &quot;Version 2.1.3 release&quot; [commit-hash]</code></pre>
+        <ol start="3" type="1">
+            <li>Lists all the tickets</li>
+        </ol>
+        <pre><code>git tag --list</code></pre>
+        <ol start="4" type="1">
+            <li>Displays list of tickets w/ the message</li>
+        </ol>
+        <pre><code>git tag -l -n</code></pre>
+        <ol start="5" type="1">
+            <li>Making it to remote</li>
+        </ol>
+        <pre><code>git push origin --tags</code></pre>
+        <h2 id="understanding-git-stash">Understanding Git Stash</h2>
+        <ol type="1">
+            <li>Save the changes to stash</li>
+        </ol>
+        <pre><code>git stash save &quot;message-description&quot;</code></pre>
+        <ol start="2" type="1">
+            <li>Lists all the stashes</li>
+        </ol>
+        <pre><code>git stash list</code></pre>
+        <ol start="3" type="1">
+            <li>Details of a particular stash</li>
+        </ol>
+        <pre><code>git stash show stash@{0}</code></pre>
+        <ol start="4" type="1">
+            <li>Retrieve stash by removing everything from stash</li>
+        </ol>
+        <pre><code>git stash pop stash@{0}</code></pre>
+        <ol start="5" type="1">
+            <li>Retrieve stash by not removing everything from stash</li>
+        </ol>
+        <pre><code>git stash apply stash@{0}</code></pre>
+        <ol start="6" type="1">
+            <li>Remove everything from the mentioned stash</li>
+        </ol>
+        <pre><code>git stash drop stash@{0}</code></pre>
+        <ol start="7" type="1">
+            <li>Deleting all the stashes that are present</li>
+        </ol>
+        <pre><code>git stash clear</code></pre>
+        <h2 id="few-additional-commands">Few additional commands</h2>
+        <ol type="1">
+            <li>Lists the un-tracked files that would be removed</li>
+        </ol>
+        <pre><code>git clean -n</code></pre>
+        <ol start="2" type="1">
+            <li>Force removal of un-tracked files</li>
+        </ol>
+        <pre><code>git clean -f</code></pre>
+        <ol start="3" type="1">
+            <li>Lists the branches and which we are currently in</li>
+        </ol>
+        <pre><code>ls -la .git/refs/heads</code></pre>
+        <ol start="4" type="1">
+            <li>Remove the cached data of file</li>
+        </ol>
+        <pre><code>git rm -- cached [file-name]</code></pre>
+        <ol start="5" type="1">
+            <li>To list the contents of the git object such as commit, tree,
+                blob</li>
+        </ol>
+        <pre><code>git ls-tree</code></pre>
+        <ol start="6" type="1">
+            <li>Reset all the changes back to the last commit of master</li>
+        </ol>
+        <pre><code>git checkout -- [file-name]</code></pre>
+        <h2 id="configuring-commands">Configuring Commands</h2>
+        <p>Configure user information for all local repositories</p>
+        <ol type="1">
+            <li>Sets the name you want attached to your commit transactions</li>
+        </ol>
+        <pre><code>git config --global user.name &quot;[name]&quot;</code></pre>
+        <ol start="2" type="1">
+            <li>Sets the email you want attached to your commit transactions</li>
+        </ol>
+        <pre><code>git config --global user.email &quot;[email address]&quot;</code></pre>
+        <ol start="3" type="1">
+            <li>Enables helpful colorization of command line output</li>
+        </ol>
+        <pre><code>git config --global color.ui auto</code></pre>
+        <blockquote>
+            <p>// create new repo on command line - git init - git add README.md -
+                git commit -m “<message>” - git branch -M main - git remote add origin
+                    <link-to-repo> - git push -u origin main</p>
+        </blockquote>
+        <blockquote>
+            <p>// push to existing repo on command line - git remote add origin
+                <link-to-repo> - git branch -M main - git push -u origin main
+            </p>
+        </blockquote>
+</body>
+
+</html>
