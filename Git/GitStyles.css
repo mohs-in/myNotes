@@ -209,3 +209,25 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color : #aafc9d;
+}
+
+.block-element {
+  display: block;
+  background-color: transparent; /* Just for visibility */
+  padding: 10px;
+  margin-bottom: 10px;
+
+}
+
+#flex-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
