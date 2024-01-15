@@ -13,8 +13,19 @@
 </head>
 
 <body>
-    
-    <a href="#terminology">Bookmarks</a>
+    <code id="back-to-bookmarks">Click on the following bookmarks to jump to the content.</code>
+    <a href="#terminology">Terminology</a>
+    <a href="#basic-commands">Basic Commands</a>
+    <a href="#git-log-and-its-variations">Git Log and its Variations</a>
+    <a href="#git-branch">Git Branch</a>
+    <a href="#reset-in-git">Reset in Git</a>
+    <a href="#remote-repository-related">Remote Repository Related</a>
+    <a href="#config-of-remote">Configuring the remote Git user in Terminal</a>
+    <a href="#the-hidden-files">The Hidden Files</a>
+    <a href="#tagging-in-git">Tagging in Git</a>
+    <a href="#understanding-git-stash">Understanding Git Stash</a>
+    <a href="#few-additional-commands">Few Additional Commands</a>
+    <a href="#configuring-commands">Configuring Commands</a>
     
     <h1>Revision of Git</h1>
         
@@ -42,7 +53,7 @@
                 to different branches, tags, or commits when using git checkout</p>
         </blockquote>
 
-        <h2 id="basic-commands">Basic Commands</h2>
+        <a href="#back-to-bookmarks"><h2 id="basic-commands">Basic Commands</h2></a>
         <ol type="1">
             <li>Initializing Git.</li>
         </ol>
@@ -76,7 +87,8 @@
             <li>To un-stage a staged commit.</li>
         </ol>
         <pre><code>git restore -- staged [file-name]</code></pre>
-        <h2 id="git-log-and-its-variations">Git log and its variations</h2>
+
+        <a href="#back-to-bookmarks"><h2 id="git-log-and-its-variations">Git log and its variations</h2></a>
         <ol type="1">
             <li>Displays all the commits.</li>
         </ol>
@@ -117,7 +129,8 @@
             <li>Lists all commits from all branches.</li>
         </ol>
         <pre><code>git log --graph --online --decorate --all</code></pre>
-        <h2 id="git-branch">Git Branch</h2>
+
+        <a href="#back-to-bookmarks"><h2 id="git-branch">Git Branch</h2></a>
         <ol type="1">
             <li>To create a new branch.</li>
         </ol>
@@ -142,7 +155,8 @@
             <li>Delete the branch.</li>
         </ol>
         <pre><code>git branch -d [branch-name]</code></pre>
-        <h2 id="reset-in-git">Reset in Git</h2>
+
+        <a href="#back-to-bookmarks"><h2 id="reset-in-git">Reset in Git</h2></a>
         <p>There are three types of RESET in Git: Mixed, Soft and Hard.</p>
         <ol type="1">
             <li>Default reset often referred as Mixed reset which goes back to the mentioned
@@ -160,7 +174,8 @@
                 after that. *** Use at your own risk</li>
         </ol>
         <pre><code>git reset --hard [commit]</code></pre>
-        <h2 id="remote-repository-related">Remote Repository Related</h2>
+
+        <a href="#back-to-bookmarks"><h2 id="remote-repository-related">Remote Repository Related</h2></a>
         <ol type="1">
             <li>Check if Remote</li>
         </ol>
@@ -199,7 +214,7 @@
                 combination of <code>git fetch</code> and <code>git merge</code></li>
         </ol>
         <pre><code>git pull</code></pre>
-        <h2>Configuring the remote Git user in Terminal</h2>
+        <a href="#back-to-bookmarks"><h2 id="config-of-remote">Configuring the remote Git user in Terminal</h2></a>
         <ul>
             <li>Authentication to Github from terminal</li>
         </ul>
@@ -212,7 +227,7 @@
             <p>4. How would you like to authenticate GitHub CLI? [Select Paste an authentication token]</p>
             <p>Generate a Personal access token and paste it in the terminal.</p>
         </blockquote>
-        <h2 id="the-hidden-files">The hidden-files</h2>
+        <a href="#back-to-bookmarks"><h2 id="the-hidden-files">The hidden-files</h2></a>
         <blockquote>
             <ul>
                 <li><code>.gitignore:</code> The git ignore file ignores the tracking of
@@ -222,7 +237,7 @@
                     name instead of gitkeep.</li>
             </ul>
         </blockquote>
-        <h2 id="tagging-in-git">Tagging in Git</h2>
+        <a href="#back-to-bookmarks"><h2 id="tagging-in-git">Tagging in Git</h2></a>
         <ol type="1">
             <li>Creating a ticket</li>
         </ol>
@@ -243,7 +258,7 @@
             <li>Making it to remote</li>
         </ol>
         <pre><code>git push origin --tags</code></pre>
-        <h2 id="understanding-git-stash">Understanding Git Stash</h2>
+        <a href="#back-to-bookmarks"><h2 id="understanding-git-stash">Understanding Git Stash</h2></a>
         <ol type="1">
             <li>Save the changes to stash</li>
         </ol>
@@ -272,7 +287,7 @@
             <li>Deleting all the stashes that are present</li>
         </ol>
         <pre><code>git stash clear</code></pre>
-        <h2 id="few-additional-commands">Few additional commands</h2>
+        <a href="#back-to-bookmarks"><h2 id="few-additional-commands">Few additional commands</h2></a>
         <ol type="1">
             <li>Lists the un-tracked files that would be removed</li>
         </ol>
@@ -298,7 +313,7 @@
             <li>Reset all the changes back to the last commit of master</li>
         </ol>
         <pre><code>git checkout -- [file-name]</code></pre>
-        <h2 id="configuring-commands">Configuring Commands</h2>
+        <a href="#back-to-bookmarks"><h2 id="configuring-commands">Configuring Commands</h2></a>
         <p>Configure user information for all local repositories</p>
         <ol type="1">
             <li>Sets the name you want attached to your commit transactions</li>
