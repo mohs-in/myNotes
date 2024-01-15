@@ -1,6 +1,6 @@
 html {
   color: #1a1a1a;
-  background-color: #fdfdfd;
+  background-color: #111426;
 }
 body {
   margin: 0 auto;
@@ -13,6 +13,8 @@ body {
   overflow-wrap: break-word;
   text-rendering: optimizeLegibility;
   font-kerning: normal;
+  background-color: #111426;
+  color: #FFFFFF;
 }
 @media (max-width: 600px) {
   body {
@@ -67,6 +69,7 @@ h4,
 h5,
 h6 {
   margin-top: 1.4em;
+  color: #D19DFC;
 }
 h5,
 h6 {
@@ -199,3 +202,10 @@ ul.task-list li input[type="checkbox"] {
   text-align: center;
   margin: 0.5rem auto;
 }
+
+a {
+  background-color: #FFFFFF;
+  color: #fff;
+  text-decoration: none;
+}
+
