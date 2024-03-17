@@ -2,6 +2,7 @@ body {
     text-align: center;
     background-color: #111426;
     color: #FFFFFF;
+    margin: 1em;
 }
 
 .table-el {
@@ -11,9 +12,7 @@ body {
 }
 
 .heading {
-    background-color: #D19DFC;
-    color: #240b38;
-    border-radius: 50%;
+    color: powderblue;
 }
 
 p{
@@ -33,3 +32,8 @@ a:hover {
     margin-top: 50px;
 }
 
+@media (max-width:480px) {
+    body {
+        margin: 2em;
+    }
+}
